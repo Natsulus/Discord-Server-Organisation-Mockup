@@ -1,0 +1,102 @@
+#container { width: 50px; height: 50px; border: 1px solid darkgrey; position: relative; border-radius: 50%;}
+#center { width: 10px; height: 10px; position: absolute; left: 20px; top: 20px; background: #000; border-radius: 50%; }
+.server { position: absolute; background: #f00; border-radius: 50%; }
+
+.server {
+    width: 10px;
+    height: 10px;
+    line-height: 8px;
+    text-align: center;
+    font-size: 7px;
+}
+
+.moveAni {
+    transition: left 400ms ease-out, top 400ms ease-out;
+}
+
+.menuSection {
+    background-color: #2e3136/*#36393e*/;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: darkgrey;
+}
+
+.menuSelector {
+    margin: 25px;
+    padding: 10px;
+    padding-top: 0px;
+    height: 20%;
+    border: 1px solid darkgrey;
+}
+
+.menuSelector table {
+    width: 100%;
+    margin: auto;
+    color: darkgrey;
+}
+
+.menuSelector table td input[type="radio"] {
+    margin-right: 5px;
+    margin-top: -7px;
+    vertical-align: middle;
+}
+
+.selectedMenu {
+    margin: 25px;
+    margin-top: 0px;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid darkgrey;
+}
+
+.updateSection {
+    margin: 25px;
+    margin-top: 0px;
+    padding: 10px;
+    height: 40%;
+    border: 1px solid darkgrey;
+    overflow-y: hidden;
+}
+
+.updateSection:hover {
+    overflow-y: auto;
+}
+
+.updateSection li {
+    margin-left: 20px;
+}
+
+.updateSection li:before {
+    content: "- ";
+}
+
+.collection {
+    width: 50px;
+    height: 50px;
+    border: 1px solid darkgrey;
+    position: relative;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.collection+.guild {
+    margin-top: 8px;
+}
+
+.container {
+    position: absolute;
+    border: 1px solid darkgrey;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    line-height: 8px;
+    text-align: center;
+    font-size: 7px;
+}
+
+.collection .container-placeholder {
+    border:1px dashed #535559;
+    border-radius:50%;
+    box-sizing:border-box;
+}

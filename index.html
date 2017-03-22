@@ -1,0 +1,172 @@
+<html>
+	<head>
+        <link rel="stylesheet" href="https://discordapp.com/assets/f5ec7b77fbdbdca3588f.css">
+        <link rel="stylesheet" href="./styles.css">
+		<script src="https://code.jquery.com/jquery-3.2.0.min.js" defer></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" defer></script>
+        <script src="./code.js" async></script>
+	</head>
+	<body>
+        <div>
+            <div class="app flex-vertical theme-dark">
+                <div class="layers flex-vertical flex-spacer">
+                    <div class="layer">
+                        <section class="flex-horizontal flex-spacer">
+                            <div class="guilds-wrapper">
+                                <div class="scroller-wrap">
+                                    <div class="scroller guilds">
+                                        <div class="guild">
+                                            <div class="guild-inner" draggable="false" style="border-radius: 25px; background-color: rgb(46, 49, 54);">
+                                                <a draggable="false" href="/channels/@me">
+                                                    <div class="friends-icon"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="friends-online">18 Online</div>
+                                        <span class="dms"></span>
+                                        <div class="guild-separator"></div>
+                                        <button class="guild guilds-add">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menuSection">
+                                <div style="margin: 0 28px -25px 28px;">
+                                    <p style="float: left; width: 50%;"><span style="font-weight: bolder">Version: </span>0.0.4 (<a style="margin-top: 13px; width: 40%; text-align: right;" href="https://github.com/Natsulus/Discord-Server-Organisation-Mockup/archive/master.zip">Download</a>)</p>
+                                    <p style="float: right; width: 50%; text-align: right"><span style="font-weight: bolder">Last Update: </span>10:40PM 22/03/2017 (GMT+11)</p>
+                                </div>
+                                <div class="menuSelector">
+                                    <h1>Concept Selection (currently does nothing)</h1>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="dividers" />
+                                                    Dividers
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="foldersVertical" />
+                                                    Folders Vertical Drawer
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="foldersHorizontal" />
+                                                    Folders Horizontal Slider
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="collectionsNormal" checked/>
+                                                    Collections Normal
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="collectionsHover" />
+                                                    Collections Hover Size
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="collectionsDrag" />
+                                                    Collections Drag Select
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="stackableGroup" />
+                                                    Stackable Groups
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="tba" disabled/>
+                                                    TBA
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <input type="radio" name="concepts" value="tba" disabled/>
+                                                    TBA
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="selectedMenu">
+                                    <h1>Modifications Menu</h1>
+                                    <p id="collectionIndex">
+                                        <span style="margin-right: 10px;">Collection Index: </span>
+                                    </p>
+                                    <p id="containerIndex">
+                                        <span style="margin-right: 10px;">Container Index: </span>
+                                    </p>
+                                    <p>
+                                        <span style="margin-right: 10px;">Container Radius: </span>
+                                        <select id="containerRadius">
+                                            <option value="15" selected>15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <span style="margin-right: 10px;">Centre Container: </span>
+                                        <input id="containerCentre" type="checkbox" style="vertical-align: middle; margin-top: -1px;"/>
+                                    </p>
+                                    <div>
+                                        <button id="addCollection">Add Collection</button>
+                                        <button id="removeCollection">Remove Collection</button>
+                                        <button id="addContainer">Add Container</button>
+                                        <button id="removeContainer">Remove Container</button>
+                                    </div>
+                                </div>
+                                <div class="updateSection">
+                                    <h1>Update Log</h1>
+                                    <h2>v0.0.4</h2>
+                                    <ul>
+                                        <li>Added Radius Option</li>
+                                        <li>Limited Containers per Collection to 8</li>
+                                        <li>Added a Centre Container Option and Centre Container Support (Container Limit increases to 9)</li>
+                                        <li>Collection & Servers are now Sortable</li>
+                                        <li>Added a replica non-functional right-click context menu for servers</li>
+                                        <li>Moving Servers into Containers planned to be via context menu due to difficulty with drag-drop behaviour which may come at a later point in time instead.</li>
+                                        <li>Moved to <a href="https://github.com/Natsulus/Discord-Server-Organisation-Mockup">Github</a></li>
+                                    </ul>
+                                    <h2>v0.0.3</h2>
+                                    <ul>
+                                        <li>Moved Download Link to avoid crap CSS</li>
+                                        <li>Fixed collection item position bug due to defer script, swapped to async</li>
+                                        <li>Partial Modification Menu for Collections</li>
+                                    </ul>
+                                    <h2>v0.0.2</h2>
+                                    <ul>
+                                        <li>Created Server Bar List</li>
+                                        <li>Created Server Circles</li>
+                                        <li>Version and Last Update Time Added to HTML</li>
+                                        <li>Created a Concept Selection Section (no functionality yet)</li>
+                                        <li>Created a Temporary Collections Concept Holder to hold onto v0.0.1 content</li>
+                                        <li>Created an Update Log</li>
+                                        <li>Added a Download Link</li>
+                                    </ul>
+                                    <h2>v0.0.1</h2>
+                                    <ul>
+                                        <li>Basic Collections Mockup Complete</li>
+                                        <li>Hover Partially Done</li>
+                                        <li>Add and Remove Server Animation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
